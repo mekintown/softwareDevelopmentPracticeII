@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./register.js" defer></script>
+    <title>Expo</title>
+  </head>
+  <body>
+    <header>
+      <h3>Expo</h3>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./sign-up.html">Sign up</a>
+      </nav>
+    </header>
+    <div class="sign-up-container">
+      <div class="sign-up-left">
+        <img
+          src="../assets/sign-up.svg"
+          alt="Sign up image"
+          class="sign-up-image"
+        />
+        <p class="advertising">
+          Sign up today and experience the ultimate benefits!
+        </p>
+      </div>
+      <div class="sign-up-right">
+        <form
+          class="sign-up-form"
+          onsubmit="return handleFormOnSubmit(event)"
+          novalidate
+        >
+          <h2 class="right-header">Sign up now!</h2>
+          <div class="input-wrapper company-name-input">
+            <input type="text" placeholder="Company name*" required />
+            <div class="error" aria-live="polite"></div>
+          </div>
+          <div class="input-wrapper">
+            <select id="boothSize">
+              <option disabled selected value="">Choose Booth size*</option>
+              <option value="10*10">10*10 ft</option>
+              <option value="10*15">10*15 ft</option>
+            </select>
+            <div class="error" aria-live="polite"></div>
+          </div>
+          <div class="input-wrapper">
+            <input type="number" placeholder="Slots" min="1" max="10" />
+            <div class="error" aria-live="polite"></div>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Contact Name*" required />
+            <div class="error" aria-live="polite"></div>
+          </div>
+          <div class="input-wrapper">
+            <input type="tel" placeholder="Contact Number*" required />
+            <div class="error" aria-live="polite"></div>
+          </div>
+          <div class="sign-up-footer">
+            <button type="submit" class="create-account-btn">Submit</button>
+            <div class="table-check-box">
+              <input type="checkbox" id="need-table" />
+              <label for="need-table" class="sign-up-label"
+                >Table for the booth?</label
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
